@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>To-Do App</title>
+        <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="/assets/todo-list.js" ></script>
+    </head>
+    <body>
+        <h1>My Todo List</h1>
+        <br><br><br>
+        <div id="todo-table">
+
+            <form>
+                <input type="text" name="item" placeholder="Add to this list...." required />
+                <button type="submit">Add Item</button>
+            </form>
+
+            <ul>
+                <% todos.forEach((todo_stuff)=>{ %>
+                <li><%= todo_stuff.item %></li> 
+                <% }); %>
+            </ul>
+
+        </div>
+    </body>
+</html>
